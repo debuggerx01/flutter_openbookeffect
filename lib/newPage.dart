@@ -33,7 +33,7 @@ class NewPageState extends State<NewPage> {
                 Navigator.of(context).pop();
               },
               child: new Center(
-                child: new Text('第${SV.index}页面'),
+                child: new Text('第${SV.index}页面123'),
               ),
             ),
           ],
