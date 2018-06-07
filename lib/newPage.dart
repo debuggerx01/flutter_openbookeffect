@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_openbookeffect/SV.dart';
 
 class NewPage extends StatefulWidget {
-  
-
   @override
   NewPageState createState() => new NewPageState();
 
-  NewPage(Key key) :super(key: key);
+  NewPage(Key key) : super(key: key);
 }
 
 class NewPageState extends State<NewPage> {
@@ -24,11 +22,19 @@ class NewPageState extends State<NewPage> {
       body: new SizedBox.expand(
         child: new Stack(
           children: <Widget>[
-            new Image(
-              image: new AssetImage('images/parchment.png'),
+            new SizedBox.expand(
+              child: new Image(
+                image: new AssetImage('images/parchment.png'),
+                fit: BoxFit.cover,
+              ),
             ),
-            new Center(
-              child: new Text('第${SV.index}页面'),
+            new GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              child: new Center(
+                child: new Text('第${SV.index}页面'),
+              ),
             ),
           ],
         ),

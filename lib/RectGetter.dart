@@ -14,8 +14,7 @@ class RectGetter extends StatefulWidget {
     var size = object?.semanticBounds?.size;
 
     if (translation != null && size != null) {
-      return new Rect.fromLTWH(
-          translation.x, translation.y, size.width, size.height);
+      return new Rect.fromLTWH(translation.x, translation.y, size.width, size.height);
     } else {
       return null;
     }
@@ -35,6 +34,13 @@ class RectGetter extends StatefulWidget {
   ///持有RectGetter对象时使用该方法获得其child的Rect
   Rect getRect() {
     return getRectFromKey(this.key);
+  }
+
+  /// 克隆出新对象实例，避免同一GlobalKey在组件树上重复出现导致的问题
+  RectGetter clone() {
+    return new RectGetter.defaultKey(
+      child: this.child,
+    );
   }
 
   @override
