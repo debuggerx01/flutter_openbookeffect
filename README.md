@@ -1,6 +1,7 @@
 # flutter_openbookeffect
 
-A new Flutter application.
+## 效果演示：
+![DEMO](https://github.com/debuggerx01/flutter_openbookeffect/blob/master/demo.gif?raw=true)
 
 ## Getting Started
 
